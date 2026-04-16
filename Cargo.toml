@@ -9,7 +9,6 @@ description = "A Rust implementation of `sonare`: pronounceable and organic word
 nanorand = "0.8.0"
 unicode-normalization = "0.1.25"
 thiserror = "2.0"
-once_cell = "1.19"
 
 [dev-dependencies]
 criterion = "0.5"

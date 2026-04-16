@@ -365,7 +365,6 @@ version = "0.0.1"
 dependencies = [
  "criterion",
  "nanorand",
- "once_cell",
  "thiserror",
  "unicode-normalization",
 ]
