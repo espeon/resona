@@ -2,7 +2,6 @@ use nanorand::{ChaCha, Rng};
 
 pub mod err;
 pub mod generate_name;
-pub mod normalize;
 pub mod pad;
 pub mod pattern;
 pub mod phonemes;

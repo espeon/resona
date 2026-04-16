@@ -2,9 +2,8 @@ use nanorand::ChaCha;
 
 use crate::utils::{
     err::SonaError,
-    normalize::normalize_string,
     pad::pad_to_len,
-    pattern::{PATTERNS, build_pattern},
+    pattern::{build_pattern, PATTERNS},
     weighted_pick::weighted_pick,
 };
 
@@ -19,10 +18,5 @@ pub fn generate_name(rng: &mut ChaCha<8>, config: &crate::Config) -> Result<Stri
     let pattern = *weighted_pick(rng, PATTERNS).ok_or(SonaError::NoPatterns)?;
 
     let base = build_pattern(&pattern, rng);
-    Ok(pad_to_len(
-        &normalize_string(&base),
-        config.min,
-        config.max,
-        rng,
-    ))
+    Ok(pad_to_len(&base, config.min, config.max, rng))
 }
