@@ -2,6 +2,7 @@
 name = "resona"
 version = "0.0.1"
 edition = "2024"
+license = "MIT"
 description = "A Rust implementation of `sonare`: pronounceable and organic words that feel natural"
 
 [dependencies]
